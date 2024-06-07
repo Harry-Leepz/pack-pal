@@ -1,3 +1,11 @@
+import ItemCount from "./ItemCount";
+import Logo from "./Logo";
+
 export default function Header() {
-  return <div>Header</div>;
+  return (
+    <header>
+      <Logo />
+      <ItemCount />
+    </header>
+  );
 }
