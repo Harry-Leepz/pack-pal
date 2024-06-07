@@ -1,3 +1,9 @@
 export default function AddItemForm() {
-  return <div>AddItemForm</div>;
+  return (
+    <form>
+      <h2>Add an item</h2>
+      <input />
+      <button className='btn'>Add item to list</button>
+    </form>
+  );
 }
