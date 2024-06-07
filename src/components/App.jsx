@@ -1,8 +1,8 @@
 import BackgroundHeading from "./BackgroundHeading";
 import Footer from "./Footer";
-import Header from "./Header";
-import ItemList from "./ItemList";
-import Sidebar from "./Sidebar";
+import Header from "./header/Header";
+import ItemList from "./itemList/ItemList";
+import Sidebar from "./sidebar/Sidebar";
 
 function App() {
   return (
