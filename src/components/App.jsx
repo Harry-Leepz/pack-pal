@@ -10,7 +10,13 @@ import { initialItemsList } from "./itemList/initialItemsList";
 function App() {
   const [items, setItems] = useState(initialItemsList);
 
-  const handleAddItem = (newItem) => {
+  const handleAddItem = (newItemName) => {
+    const newItem = {
+      id: new Date().getTime(),
+      name: newItemName,
+      completed: false,
+    };
+
     setItems((prevItems) => {
       return [...prevItems, newItem];
     });
