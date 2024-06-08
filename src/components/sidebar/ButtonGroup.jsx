@@ -1,11 +1,28 @@
 import Button from "./Button";
 
-export default function ButtonGroup({ handleRemoveAllItems }) {
+export default function ButtonGroup({
+  handleRemoveAllItems,
+  handleMarkAllAsComplete,
+  handleMarkAllAsIncomplete,
+  handleResetToInitial,
+}) {
   return (
     <section className='button-group'>
-      <Button buttonType='secondary' label='Mark all as complete' />
-      <Button buttonType='secondary' label='Mark all as incomplete' />
-      <Button buttonType='secondary' label='Reset to initial' />
+      <Button
+        onClick={handleMarkAllAsComplete}
+        buttonType='secondary'
+        label='Mark all as complete'
+      />
+      <Button
+        onClick={handleMarkAllAsIncomplete}
+        buttonType='secondary'
+        label='Mark all as incomplete'
+      />
+      <Button
+        onClick={handleResetToInitial}
+        buttonType='secondary'
+        label='Reset to initial'
+      />
       <Button
         onClick={handleRemoveAllItems}
         buttonType='secondary'
