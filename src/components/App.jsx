@@ -9,13 +9,20 @@ import { initialItemsList } from "./itemList/initialItemsList";
 
 function App() {
   const [items, setItems] = useState(initialItemsList);
+
+  const handleAddItem = (newItem) => {
+    setItems((prevItems) => {
+      return [...prevItems, newItem];
+    });
+  };
+
   return (
     <>
       <BackgroundHeading />
       <main>
         <Header />
         <ItemList items={items} />
-        <Sidebar setItems={setItems} />
+        <Sidebar handleAddItem={handleAddItem} />
       </main>
       <Footer />
     </>
