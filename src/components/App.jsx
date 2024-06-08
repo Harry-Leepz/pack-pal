@@ -16,10 +16,13 @@ function App() {
       name: newItemName,
       completed: false,
     };
-
     setItems((prevItems) => {
       return [...prevItems, newItem];
     });
+  };
+
+  const handleRemoveAllItems = () => {
+    setItems([]);
   };
 
   return (
@@ -28,7 +31,10 @@ function App() {
       <main>
         <Header />
         <ItemList items={items} />
-        <Sidebar handleAddItem={handleAddItem} />
+        <Sidebar
+          handleAddItem={handleAddItem}
+          handleRemoveAllItems={handleRemoveAllItems}
+        />
       </main>
       <Footer />
     </>
