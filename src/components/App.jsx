@@ -14,7 +14,7 @@ function App() {
     const newItem = {
       id: new Date().getTime(),
       name: newItemName,
-      completed: false,
+      packed: false,
     };
     setItems((prevItems) => {
       return [...prevItems, newItem];
