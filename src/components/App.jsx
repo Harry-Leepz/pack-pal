@@ -21,6 +21,12 @@ function App() {
     });
   };
 
+  const handleDeleteItem = (id) => {
+    setItems((prevItems) => {
+      return prevItems.filter((item) => item.id !== id);
+    });
+  };
+
   const handleRemoveAllItems = () => {
     setItems([]);
   };
@@ -50,7 +56,7 @@ function App() {
       <BackgroundHeading />
       <main>
         <Header />
-        <ItemList items={items} />
+        <ItemList items={items} handleDeleteItem={handleDeleteItem} />
         <Sidebar
           handleAddItem={handleAddItem}
           handleRemoveAllItems={handleRemoveAllItems}
