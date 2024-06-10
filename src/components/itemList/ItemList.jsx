@@ -15,19 +15,21 @@ export default function ItemList({
 }) {
   const [sortBy, setSortBy] = useState("default");
 
-  const sortedItems = useMemo(() => {
-    [...items].sort((a, b) => {
-      if (sortBy === "packed") {
-        return b.packed - a.packed;
-      }
+  const sortedItems = useMemo(
+    () =>
+      [...items].sort((a, b) => {
+        if (sortBy === "packed") {
+          return b.packed - a.packed;
+        }
 
-      if (sortBy === "unpacked") {
-        return a.packed - b.packed;
-      }
+        if (sortBy === "unpacked") {
+          return a.packed - b.packed;
+        }
 
-      return;
-    });
-  }, [items, sortBy]);
+        return;
+      }),
+    [items, sortBy]
+  );
 
   return (
     <ul className='item-list'>
