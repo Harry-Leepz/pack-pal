@@ -1,5 +1,5 @@
 import { createContext, useEffect, useState } from "react";
-import { initialItemsList } from "../itemList/initialItemsList";
+import { initialItemsList } from "../components/itemList/initialItemsList";
 
 export const ItemsContext = createContext();
 

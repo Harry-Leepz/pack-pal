@@ -4,7 +4,7 @@ import Header from "./header/Header";
 import ItemList from "./itemList/ItemList";
 import Sidebar from "./sidebar/Sidebar";
 
-import ItemsContextProvider from "./contexts/ItemsContextProvider";
+import ItemsContextProvider from "../contexts/ItemsContextProvider";
 
 function App() {
   return (

@@ -2,7 +2,7 @@ import { useState, useMemo } from "react";
 import Select from "react-select";
 import EmptyView from "./EmptyView";
 
-import useItemsContext from "../hooks/useItemsContext";
+import useItemsContext from "../../hooks/useItemsContext";
 
 const sortingOptions = [
   { value: "default", label: "Sort by default" },
